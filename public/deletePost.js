@@ -6,3 +6,13 @@ const delButtonHandler = async (event) => {
 const response = await fetch(`/api/post/${id}`, {
     method: 'DELETE',
 });
+
+if (response.ok) {
+            document.location.replace('/dashboard');
+        } else {
+            alert('Failed to delete post');
+        }
+    }
+};
+
+document.querySelector('.btn-danger').addEventListener('click', delButtonHandler);
