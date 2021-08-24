@@ -21,6 +21,4 @@ if (comment) {
 
 };
 
-document
-    .querySelector('.add-comment')
-    .addEventListener('submit', addComment);   
+document.querySelector('.add-comment').addEventListener('submit', addComment);   
