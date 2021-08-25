@@ -35,3 +35,11 @@ Comment.init(
             }
         }
     },
+    {
+        sequelize,
+        freezeTableName: true,
+        underscored: true,
+        modelName: 'comment'
+    });
+
+    module.exports = Comment;
