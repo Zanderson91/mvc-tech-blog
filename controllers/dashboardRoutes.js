@@ -50,3 +50,28 @@ router.get('/newpost', (req, res) => {
     }
     res.render('new-post');
 });
+
+router.get('/editpost/:id', withAuth, async (req, res) => {
+    try {
+        const postData = await Post.findByPk(req.params.id, {
+            attributes: [
+                'id',
+                'title',
+                'content',
+                'date_created'
+            ],
+            include: [
+                {
+                    model: User,
+                    attributes: ['name'],
+                },
+                {
+                    model: Comment,
+                    attributes: ['id', 'comment', 'post_id', 'user_id', 'created_at'],
+                    include: {
+                        model: User,
+                        attributes: ['name']
+                    }
+                },
+            ],
+        });
