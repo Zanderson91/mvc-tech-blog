@@ -14,3 +14,18 @@ const users = await User.bulkCreate(userData, {
     returning: true,
 });
 console.log("Users successfully seeded!");
+
+for (const post of postData) {
+    await Post.create({...post,
+      user_id: users[Math.floor(Math.random() * users.length)].id,
+    });
+}
+console.log("Posts successfully seeded!");
+
+const comment = await Comment.bulkCreate(commentData);
+console.log('Comments successfully seeded!');
+
+process.exit(0);
+};
+
+seedDatabase();
