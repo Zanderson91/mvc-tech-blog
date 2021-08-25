@@ -22,3 +22,22 @@ const posts = postData.map((post) => post.get({ plain: true }));
         res.status(500).json(err);
     }
 });
+
+router.get('/post/:id', async (req, res) => {
+    try {
+        const postData = await Post.findByPk(req.params.id, {
+            include: [
+                {
+                    model: User,
+                    attributes: ['name'],
+                },
+                {
+                    model: Comment,
+                    attributes: ['id', 'comment', 'post_id', 'user_id', 'created_at'],
+                    include: {
+                        model: User,
+                        attributes: ['name']
+                    }
+                },
+            ],
+        });
