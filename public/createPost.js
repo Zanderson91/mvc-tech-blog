@@ -1,5 +1,6 @@
+const { post } = require("../controllers/api/postRoutes");
 
-const addPost = async (event) => {
+const createPost = async (event) => {
     event.preventDefault();
 
 const title = document.querySelector('#post-title').value.trim();
@@ -18,4 +19,4 @@ const response = await fetch('/api/post', {
     }
 }
 
-document.querySelector('.new-post-form').addEventListener('submit', addPost);
+document.querySelector('.new-post-form').addEventListener('submit', createPost);
