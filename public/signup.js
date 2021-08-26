@@ -17,7 +17,10 @@ if (name && email && password) {
         } else {
             alert(response.statusText);
         }
+        
     }
+    
 };
+
 
 document.querySelector('.signup-form').addEventListener('submit', signupFormHandler);
