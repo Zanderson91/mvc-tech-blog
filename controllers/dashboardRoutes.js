@@ -77,7 +77,7 @@ router.get('/editpost/:id', withAuth, async (req, res) => {
         });
         const post = postData.get({ plain: true });
 
-        res.render('edit-post', {
+        res.render('edit', {
             post,
             logged_in: req.session.logged_in
         });

@@ -1,4 +1,4 @@
-const { post } = require("../controllers/api/postRoutes");
+//const { post } = require("../controllers/api/postRoutes");
 
 const createPost = async (event) => {
     event.preventDefault();
