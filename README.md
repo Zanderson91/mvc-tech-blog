@@ -4,6 +4,12 @@
   # Description
   This tech blog app is a blog that allows users to create, update and delete posts. The app also allows user to comment posts. This project is unique because it authenticates users and incorporates cookies to ensure that the user experience is optimal. MVC-Tech-Blog uses handlebars as the front end framework and communicates seamlessly with mysql to produce a quality blog site.
 
+[https://glacial-fortress-91093.herokuapp.com/dashboard]
+
+
+![Gif of project](./assets/Untitled_%20Aug%2026,%202021%208_35%20AM.gif)
+
+
   # This Week's Task
 Your task this week is to build a CMS-style blog site similar to a Wordpress site, where developers can publish their blog posts and comment on other developers’ posts as well. You’ll build this site completely from scratch and deploy it to Heroku. Your app will follow the MVC paradigm in its architectural structure, using Handlebars.js as the templating language, Sequelize as the ORM, and the express-session npm package for authentication.
 
